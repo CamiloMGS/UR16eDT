@@ -1,0 +1,418 @@
+{
+    "name": "RobotController",
+    "maps": [
+        {
+            "name": "Robot",
+            "id": "6162a629-926c-4594-aa0a-c2f5a073a334",
+            "actions": [
+                {
+                    "name": "SelectJoint",
+                    "type": "Value",
+                    "id": "82d880a5-b9b6-4008-b919-f4b038b7ba6c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MoveJoint",
+                    "type": "Value",
+                    "id": "3da81e08-9f70-4d28-a2e6-cc4628e4317d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CloseOpenGripper",
+                    "type": "Button",
+                    "id": "cf90cbbd-693c-46c4-ad00-ef260b1438fb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CloseOpenPrimaryButton",
+                    "type": "Button",
+                    "id": "62afa23c-86f8-4a6f-8b4f-707c53a95eeb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "cbce279d-b382-4f8d-b20e-1ead988c8580",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveJoint",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "c72aa835-a060-4785-8baf-f562d8144f2d",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b984b81b-b4d0-4518-a65b-1d3ef85d84e0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ef12f72b-5d43-4b21-ad0e-3d01a573dc01",
+                    "path": "<XRInputV1::HTC::HTCViveCosmosControllerOpenXR>{RightHand}/thumbstick",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a32fff0-64a7-4de7-a8cd-f780a25d58f2",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12903fec-1093-4d1f-b2d3-42626ec9d266",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36edb7a6-8e43-4d55-a1cc-a0a4c02aefa9",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "MoveJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "f61b63c3-ad6a-44f1-ac5e-c719d4d19a82",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectJoint",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "34583bef-091f-4ecb-b07f-2d966f8f0bc4",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a4012552-1b45-4698-9f66-59fe43e01b29",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "aa0d6606-abe4-449f-9ccf-41f74f6b1f05",
+                    "path": "<XRInputV1::HTC::HTCViveCosmosControllerOpenXR>{RightHand}/thumbstick",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "Generic XR Controller;VRControllers",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad605152-d4fe-46eb-b921-2a0c92ac2482",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2312043-c5aa-4f77-af79-155d5110ef64",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c240df0-6428-4de5-a393-488d2b72d41d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SelectJoint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "711b6eb4-38da-409d-b365-ee4b084401db",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "CloseOpenGripper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e195d44-b810-4116-881e-520a151d73e2",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "CloseOpenGripper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ee58020-45ed-43b4-ba5a-05e718349037",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "CloseOpenPrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fce032e4-4efb-437c-83d2-3edec5caba04",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "CloseOpenPrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RobotIK",
+            "id": "52143adf-c7af-480b-923a-96125397a502",
+            "actions": [
+                {
+                    "name": "YTranslation",
+                    "type": "Button",
+                    "id": "a74c7936-943d-42ab-a101-a8d3b0c25ef7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "XZTranslation",
+                    "type": "Value",
+                    "id": "d00c2e0e-65d1-4641-aa7f-93528ac54faa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "XZRotation",
+                    "type": "Value",
+                    "id": "c0b926b5-482e-439c-beca-34fee66159c4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "YRoation",
+                    "type": "Button",
+                    "id": "0de6d2c6-f206-4866-bc45-465a5cddfdfc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8e3b94b7-4075-46da-ab54-7c272e9d7ea8",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "XZTranslation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9b22a64-48cf-478c-b54c-4a96779fc44b",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "XZTranslation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7307d802-9892-4776-ae20-51275b95839b",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "XZTranslation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b081eb09-a008-4a51-a687-4f542a892e4c",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "YTranslation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eda37b89-aec7-4771-8c22-36e50d052983",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "YTranslation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbdb73d2-264b-4fb6-95de-b03835198b21",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "Sector(directions=3)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "XZRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2dd7ee0-6a11-46bd-bd86-3ea30faa1c33",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "Sector(directions=12)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "XZRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "353af11a-b6be-46a2-afdf-8c4b4ab8a0ea",
+                    "path": "<XRController>{LeftHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "XZRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "834f3421-a78b-4f8a-acc8-1a0f6823b525",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "YRoation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cdb6588-395a-4bf2-98c9-05dd1f3ed31d",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VRControllers",
+                    "action": "YRoation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": []
+        },
+        {
+            "name": "VRControllers",
+            "bindingGroup": "VRControllers",
+            "devices": []
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": []
+        }
+    ]
+}
